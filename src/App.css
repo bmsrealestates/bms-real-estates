@@ -1,0 +1,77 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+body { background-color: #0b1120; color: #f1f5f9; }
+.bms-container { min-height: 100vh; display: flex; flex-direction: column; }
+.bms-header { background: #0f172a; border-bottom: 1px solid #1e293b; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.header-left { display: flex; align-items: center; gap: 0.85rem; }
+.logo-box { background: linear-gradient(135deg, #eab308, #ca8a04); width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #0f172a; }
+.brand-title { font-size: 1.25rem; font-weight: 800; color: #f8fafc; }
+.brand-subtitle { font-size: 0.8rem; color: #94a3b8; }
+.header-right { display: flex; align-items: center; gap: 1rem; }
+.role-badge-btn { background: #1e293b; color: #38bdf8; border: 1px solid #334155; padding: 0.45rem 0.85rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; }
+.user-profile-pill { display: flex; align-items: center; gap: 0.65rem; background: #1e293b; padding: 0.35rem 0.85rem 0.35rem 0.45rem; border-radius: 30px; border: 1px solid #334155; }
+.avatar-circle { width: 32px; height: 32px; border-radius: 50%; background: #0284c7; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+.user-text { display: flex; flex-direction: column; }
+.user-name { font-size: 0.85rem; font-weight: 600; }
+.user-id { font-size: 0.7rem; color: #eab308; }
+.bms-nav { background: #1e293b; padding: 0.5rem 1.5rem; border-bottom: 1px solid #334155; overflow-x: auto; }
+.nav-items { display: flex; gap: 0.5rem; }
+.nav-btn { background: transparent; border: none; color: #94a3b8; padding: 0.6rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; cursor: pointer; white-space: nowrap; }
+.nav-btn:hover { background: #334155; color: #f8fafc; }
+.nav-btn.active { background: #0284c7; color: #ffffff; font-weight: 600; }
+.nav-badge { background: rgba(255, 255, 255, 0.2); padding: 0.1rem 0.4rem; border-radius: 10px; font-size: 0.75rem; }
+.bms-content { flex: 1; padding: 1.5rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+.welcome-banner { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 12px; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.gold-text { color: #eab308; }
+.quick-action-buttons { display: flex; gap: 0.75rem; }
+.btn-primary { background: #eab308; color: #0f172a; border: none; padding: 0.6rem 1.1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+.btn-secondary { background: #0284c7; color: #ffffff; border: none; padding: 0.6rem 1.1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+.btn-outline { background: transparent; color: #cbd5e1; border: 1px solid #475569; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; }
+.metrics-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.metric-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.25rem; }
+.metric-card.gold-border { border-color: #ca8a04; }
+.metric-header { display: flex; justify-content: space-between; align-items: center; color: #94a3b8; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.metric-card h3 { font-size: 1.6rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.35rem; }
+.metric-sub { font-size: 0.8rem; color: #94a3b8; }
+.green-text { color: #4ade80; }
+.blue-text { color: #38bdf8; }
+.slab-progress-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem; }
+.progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.9rem; }
+.badge-gold { background: rgba(234, 179, 8, 0.2); color: #facc15; padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 700; font-size: 0.8rem; }
+.progress-bar-bg { background: #0f172a; height: 10px; border-radius: 5px; overflow: hidden; }
+.progress-bar-fill { background: linear-gradient(90deg, #eab308, #22c55e); height: 100%; }
+.two-column-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+.panel-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.25rem; }
+.panel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.text-link { background: none; border: none; color: #38bdf8; cursor: pointer; font-size: 0.85rem; }
+.list-stack { display: flex; flex-direction: column; gap: 0.75rem; }
+.list-item { background: #0f172a; padding: 0.85rem; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+.sub-detail { font-size: 0.75rem; color: #94a3b8; margin-top: 0.2rem; }
+.status-pill { padding: 0.25rem 0.65rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+.status-pill.new-lead { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+.status-pill.site-visited, .status-pill.visited { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+.status-pill.booking-in-progress { background: rgba(234, 179, 8, 0.15); color: #facc15; }
+.status-pill.follow-up-call { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+.action-buttons-group, .table-actions { display: flex; gap: 0.4rem; }
+.btn-icon { background: #334155; color: #f8fafc; padding: 0.45rem; border-radius: 6px; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+.btn-icon.green { background: #166534; color: #bbf7d0; }
+.table-wrapper { overflow-x: auto; background: #1e293b; border-radius: 12px; border: 1px solid #334155; margin-top: 1rem; }
+.bms-table { width: 100%; border-collapse: collapse; text-align: left; }
+.bms-table th, .bms-table td { padding: 0.9rem 1.1rem; border-bottom: 1px solid #334155; font-size: 0.85rem; }
+.bms-table th { background: #0f172a; color: #94a3b8; font-weight: 600; }
+.slabs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+.slab-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.5rem; position: relative; }
+.slab-card.active-slab { border: 2px solid #eab308; background: linear-gradient(180deg, #1e293b, #172033); }
+.slab-badge { position: absolute; top: -10px; right: 15px; background: #eab308; color: #0f172a; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.5rem; border-radius: 4px; }
+.slab-rate { font-size: 2.2rem; font-weight: 900; color: #eab308; margin: 0.5rem 0; }
+.slab-range { color: #cbd5e1; font-size: 0.85rem; margin-bottom: 1rem; }
+.slab-perks { list-style: none; font-size: 0.8rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.4rem; }
+.announcements-stack, .docs-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+.announcement-item, .doc-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.25rem; }
+.doc-card { display: flex; align-items: center; justify-content: space-between; }
+.entry-form-card { background: #1e293b; border: 1px solid #38bdf8; border-radius: 12px; padding: 1.25rem; margin-top: 1rem; margin-bottom: 1rem; }
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0; }
+.form-grid label { display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.35rem; }
+.form-grid input, .form-grid select { width: 100%; padding: 0.6rem; background: #0f172a; border: 1px solid #475569; border-radius: 6px; color: white; font-size: 0.85rem; }
+.form-actions { display: flex; gap: 0.5rem; }
+.bms-footer { border-top: 1px solid #1e293b; padding: 1.5rem; text-align: center; color: #64748b; font-size: 0.8rem; margin-top: auto; }
+.footer-sub { color: #0284c7; font-size: 0.75rem; margin-top: 0.3rem; }
