@@ -1,0 +1,12 @@
+{
+  "name": "BMS Enterprise Portal",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Google.geminicodeassist"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install --global @google/gemini-cli"
+}

@@ -1,6 +1,23 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://ieidlcmmtsyqtitjzouj.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImllaWRsY21tdHN5cXRpdGp6b3VqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2MDE0MzUsImV4cCI6MjEwNzE3NzQzNX0.wEvWYCunUo6Eep-KKfClT2l_t_DqBhYsFbWe1_G5DjY';
+const configuredUrl = import.meta.env.VITE_SUPABASE_URL?.trim() || '';
+const configuredAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY?.trim() || '';
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const isValidSupabaseUrl = (() => {
+  try {
+    const url = new URL(configuredUrl);
+    return url.protocol === 'https:' || (url.protocol === 'http:' && ['localhost', '127.0.0.1'].includes(url.hostname));
+  } catch {
+    return false;
+  }
+})();
+
+export const supabaseConfigured = isValidSupabaseUrl && Boolean(configuredAnonKey);
+export const supabaseConfigError = supabaseConfigured
+  ? ''
+  : 'Portal connectivity is not configured. Set a valid VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY, then restart or redeploy.';
+
+export const supabase = createClient(
+  isValidSupabaseUrl ? configuredUrl : 'https://unconfigured.supabase.co',
+  configuredAnonKey || 'missing-supabase-anon-key'
+);
